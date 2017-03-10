@@ -1,0 +1,34 @@
+This module demo the use of the Camel integration.
+
+##
+##  Loggers
+##
+Also part is the new feature since SpringBoot 1.5.x where the logging levels can be retrieve and updated during runtime.
+
+Add POM dependency:
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+#   Disable end-point security for the time being in application.properties...
+endpoints.loggers.sensitive=false  // only for loggers.....
+
+# or for all endpoints
+management.security.enabled=false
+
+
+And access the URL ../loggers
+                   ../logger/ROOR
+
+##
+##  Camel
+##
+# Ensure ActiveMQ is installed on the system
+# Start the application
+# Access ActiveMQ on port 8161
+# Look for queue INBOUND.D
+# Submit new message to this queue and see the message count increase on the OUTBOUND.D queue.
+#
+
